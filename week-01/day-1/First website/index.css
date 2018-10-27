@@ -1,6 +1,7 @@
 * {
     font-family: 'consolas', courier;
 }
+
 h1 {
     font-size: 42px;
     margin: 100px;
@@ -8,16 +9,25 @@ h1 {
 }
 
 h2 {
-    color: #ff0099;
     margin-top: 20px;
     margin-left: 100px;
     margin-right: 100px;
-
 }
 
 p {
     margin-left: 100px;
     margin-right: 100px;
+}
+
+#lie {
+    color: #ff0099;
+}
+
+#wiki {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
 }
 
 .navi {
@@ -27,13 +37,12 @@ p {
 
 .nav {
     margin: -10px;
-    padding-right: 150px;
+    padding-right: 170px;
     word-spacing: 30px;
     line-height: 50px;
     background-color: #333333;
     text-transform: uppercase;
     text-align: right;
-
 }
 
 body {
@@ -42,8 +51,12 @@ body {
 }
 
 .dash {
+    margin-top: 50px;
     text-align: center;
 }
 
-a {
+img {
+    float: left;
+    margin-left: 110px;
+    margin-top: 10px;
 }
