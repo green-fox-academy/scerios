@@ -1,0 +1,62 @@
+* {
+    font-family: 'consolas', courier;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#lie {
+    color: #ff0099;
+}
+
+#wiki {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+}
+
+.navi {
+    font-family: 'Niramit', serif;
+    color: #ff0099;
+}
+
+.nav {
+    margin: -10px;
+    padding-right: 170px;
+    word-spacing: 30px;
+    line-height: 50px;
+    background-color: #333333;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+body {
+    size: 100%;
+    background-image: url(pics/topography.png);
+}
+
+.dash {
+    margin-top: 50px;
+    text-align: center;
+}
+
+img {
+    float: left;
+    margin-left: 110px;
+    margin-top: 10px;
+}
