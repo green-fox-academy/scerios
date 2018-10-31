@@ -4,13 +4,17 @@ import java.util.List;
 
 public class AppendA {
 
+    public static void addA(String[] animals) {
+
+        for(int i = 0; i < animals.length; i++){
+            System.out.print(animals[i] + "a ");
+        }
+    }
+
     public static void main(String[] args) {
 
-        List<Character> list = new ArrayList<>();
         String[] animals = {"koal", "pand", "zebr"};
-        ArrayList<Character> list1;
-        list.add(0, 'a');
-        System.out.println(Arrays.toString(animals));
+        addA(animals);
 
     }
 }
