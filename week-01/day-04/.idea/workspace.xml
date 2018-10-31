@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e924b41b-d6d5-4534-baee-0dfb848bbcef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day-04/DiagonalMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day-04/DiagonalMatrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/day-04/DoubleItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/day-04/DoubleItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DiagonalMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DiagonalMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DoubleItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoubleItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day-4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tiptop/tiptop-syllabus" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -173,7 +168,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540984843480" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540985219103" />
     <property name="last_opened_file_path" value="$USER_HOME$/Practice" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -254,12 +249,12 @@
       <updated>1540890980282</updated>
       <workItem from="1540890984733" duration="24720000" />
       <workItem from="1540929788073" duration="73000" />
-      <workItem from="1540975263254" duration="8821000" />
+      <workItem from="1540975263254" duration="9154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33614000" />
+    <option name="totallyTimeSpent" value="33947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="762" y="0" width="781" height="830" extended-state="0" />
