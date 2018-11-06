@@ -2,8 +2,14 @@ import java.util.ArrayList;
 
 public class Candyshop {
     public static Object sweets(ArrayList arrayList) {
-        arrayList.set(1, "Croissant");
-        arrayList.set(3, "Ice Cream");
+        for (int i = 0; i < arrayList.size(); i++) {
+            if (arrayList.get(i).equals(2)) {
+                arrayList.set(i, "Croissant");
+            }
+            if (arrayList.get(i).equals(false)) {
+                arrayList.set(i, "Ice Cream");
+            }
+        }
         return arrayList;
     }
 
