@@ -5,8 +5,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class PurpleSteps {
     public static void mainDraw(Graphics graphics) {
         for (int i = 0; i < 200; i += 15) {
-            int size = i;
-            purpleSquare(graphics, size);
+            purpleSquare(graphics, i);
         }
     }
     public static void purpleSquare(Graphics graphics, int size) {
