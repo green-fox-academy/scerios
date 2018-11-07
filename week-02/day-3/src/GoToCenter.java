@@ -9,12 +9,11 @@ public class GoToCenter {
         Random n = new Random();
         Random z = new Random();
         int low = 0;
-        int high = 320;
 
         for (int i = 0; i < 3; i++) {
-            int result = n.nextInt(high - low) + low;
-            int result2 = z.nextInt(high - low) + low;
-            graphics.drawLine(result, result2, HEIGHT / 2, WIDTH / 2);
+            int startingX = n.nextInt(WIDTH - low) + low;
+            int startingY = z.nextInt(HEIGHT - low) + low;
+            graphics.drawLine(startingX, startingY, HEIGHT / 2, WIDTH / 2);
 
         }
 
