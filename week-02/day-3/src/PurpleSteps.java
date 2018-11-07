@@ -10,7 +10,7 @@ public class PurpleSteps {
         }
     }
     public static void purpleSquare(Graphics graphics, int size) {
-        graphics.setColor(new Color(186, 85, 211));
+        graphics.setColor(new Color(153, 50, 204));
         graphics.fillRect(15 + size, 15 + size, 15, 15);
         graphics.setColor(Color.BLACK);
         graphics.drawRect(15 + size, 15 + size, 15, 15);
