@@ -6,20 +6,12 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class GoToCenter {
 
     public static void mainDraw(Graphics graphics) {
-        Random n = new Random();
-        Random z = new Random();
-        int low = 0;
-
         for (int i = 0; i < 3; i++) {
-            int startingX = n.nextInt(WIDTH - low) + low;
-            int startingY = z.nextInt(HEIGHT - low) + low;
-            graphics.drawLine(startingX, startingY, HEIGHT / 2, WIDTH / 2);
-
+            toCenter(graphics, (int)(Math.random() * WIDTH), (int)(Math.random() * HEIGHT));
         }
-
-
-
-
+    }
+    public static void toCenter(Graphics graphics, int startX, int startY) {
+        graphics.drawLine(startX, startY, WIDTH / 2, HEIGHT / 2);
     }
 
     // Don't touch the code below
