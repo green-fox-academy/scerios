@@ -8,11 +8,12 @@ public class StarryNight {
     public static void mainDraw(Graphics graphics) {
         background(graphics);
         for (int i = 0; i < 300; i++) {
+            int size = (int)((Math.random() * 10));
             int color = 102 + (int)((Math.random() * 102));
             int startX = (int)(Math.random() * (WIDTH - 5));
             int startY = (int)(Math.random() * (HEIGHT - 5));
             graphics.setColor(new Color(color, color, color));
-            graphics.drawRect(startX, startY, 5, 5);
+            graphics.fillRect(startX, startY, size, size);
 
         }
 
