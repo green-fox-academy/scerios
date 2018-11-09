@@ -7,10 +7,10 @@ public class EnvelopeStar {
     public static void mainDraw(Graphics graphics) {
         int grow = 10;
             for (int j = 0; j <= 15; j++) {
-                drawLine(graphics, WIDTH / 2, grow, (WIDTH / 2) + grow, (HEIGHT / 2));
-                drawLine(graphics, WIDTH / 2, grow, (WIDTH / 2) - grow, (HEIGHT / 2));
-                drawLine(graphics, WIDTH / 2, HEIGHT - grow, (WIDTH / 2) - grow, (HEIGHT / 2));
-                drawLine(graphics, WIDTH / 2, HEIGHT - grow, (WIDTH / 2) + grow,(HEIGHT / 2));
+                drawLine(graphics, grow, HEIGHT / 2, (WIDTH / 2), (HEIGHT / 2) + grow);
+                drawLine(graphics, grow, HEIGHT / 2, (WIDTH / 2), (HEIGHT / 2) - grow);
+                drawLine(graphics, WIDTH - grow, HEIGHT / 2, (WIDTH / 2), (HEIGHT / 2) - grow);
+                drawLine(graphics, WIDTH - grow, HEIGHT / 2, (WIDTH / 2),(HEIGHT / 2) + grow);
                 grow += 10;
             }
     }
