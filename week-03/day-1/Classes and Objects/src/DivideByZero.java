@@ -16,6 +16,8 @@ public class DivideByZero {
       System.out.println(result);
     } catch (ArithmeticException e) {
       System.out.println("Fail");
+    } finally {
+      scan.close();
     }
   }
 }
