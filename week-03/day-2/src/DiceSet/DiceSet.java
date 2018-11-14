@@ -1,7 +1,5 @@
 package DiceSet;
 
-import java.util.Arrays;
-
 public class DiceSet {
 
   int[] dices = new int[6];
