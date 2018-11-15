@@ -18,9 +18,9 @@ public class Brawl {
     System.out.println(polly.qoute());
 
     System.out.println(jack.howsItGoingMate());
-    jack.drinkABottle();
     System.out.println(jack.howsItGoingMate());
     francis.drinkSomeRum();
     jack.brawl(jack, francis);
+    blackPearl.displayList(crew);
   }
 }

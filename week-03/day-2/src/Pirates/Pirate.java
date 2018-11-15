@@ -4,6 +4,7 @@ public class Pirate {
   String name;
   int toxicLevel;
   int toxicated = 5;
+  boolean passedOut;
   boolean alive;
 
   public Pirate(String name) {
@@ -15,17 +16,10 @@ public class Pirate {
   public int drinkSomeRum() {
     if (alive == false) {
       System.out.println("He's dead.");
+    } else if (passedOut == true) {
+      System.out.println("He's passed out.");
     } else {
       this.toxicLevel++;
-    }
-    return this.toxicLevel;
-  }
-
-  public int drinkABottle() {
-    if (alive == false) {
-      System.out.println("He's dead.");
-    } else {
-      this.toxicLevel += 5;
     }
     return this.toxicLevel;
   }
@@ -45,7 +39,7 @@ public class Pirate {
 
   public void brawl(Pirate challenger, Pirate challenged) {
     int rng = (int)((Math.random() * 3));
-    if (challenger.alive == true && challenged.alive == true) {
+    if ((challenger.alive == true && challenged.alive == true) && challenger.passedOut == false && challenged.passedOut == false) {
       if (rng == 1) {
         challenger.alive = false;
         System.out.println("The winner is: " + challenged.name + "! - " + challenger.name + " is dead.");
@@ -55,6 +49,10 @@ public class Pirate {
       } else {
         System.out.println("Both land lubber have passed out.");
       }
+    } else if (challenger.passedOut == true || challenged.passedOut == true) {
+      System.out.println("One or both of the participants are passed out. No brawl tonight.");
+    } else {
+      System.out.println("One or both of the participants are already dead. What a loss...");
     }
   }
 }
