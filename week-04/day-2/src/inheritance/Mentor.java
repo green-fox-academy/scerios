@@ -3,7 +3,7 @@ package inheritance;
 public class Mentor extends Person {
   String level;
 
-  public Mentor(String name, String gender, String level, int age) {
+  public Mentor(String name, int age, String gender, String level) {
     this.name = name;
     this.gender = gender;
     if (level != "junior" || level != "intermediate" || level != "senior") {
