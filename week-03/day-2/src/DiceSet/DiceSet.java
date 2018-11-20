@@ -2,15 +2,6 @@ package DiceSet;
 
 public class DiceSet {
 
-  int[] dices = new int[6];
-
-  public int[] roll() {
-    for (int i = 0; i < dices.length; i++) {
-      dices[i] = (int) (Math.random() * 6) + 1;
-    }
-    return dices;
-  }
-
   public int[] getCurrent() {
     return dices;
   }
@@ -25,6 +16,15 @@ public class DiceSet {
     }
   }
 
+  static int[] dices = new int[6];
+
+  public int[] roll() {
+    for (int i = 0; i < dices.length; i++) {
+      dices[i] = (int) (Math.random() * 6) + 1;
+    }
+    return dices;
+  }
+
   public void reroll(int k) {
     dices[k] = (int) (Math.random() * 6) + 1;
   }
@@ -32,7 +32,8 @@ public class DiceSet {
   public static void main(String[] args) {
     DiceSet diceSet = new DiceSet();
     diceSet.roll();
-    for (int i = 0; i < 6; i++) {
+
+    for (int i = 0; i < dices.length; i++) {
       do {
         diceSet.reroll(i);
       } while (diceSet.dices[i] != 6);
