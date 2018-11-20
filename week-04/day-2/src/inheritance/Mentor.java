@@ -6,9 +6,6 @@ public class Mentor extends Person {
   public Mentor(String name, int age, String gender, String level) {
     this.name = name;
     this.gender = gender;
-    if (level != "junior" || level != "intermediate" || level != "senior") {
-      System.out.println("A mentors level must be either <junior>, <intermediate> or <senior>.");
-    }
     this.level = level;
     this.age = age;
   }
