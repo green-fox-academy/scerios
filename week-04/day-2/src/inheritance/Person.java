@@ -20,11 +20,11 @@ public class Person {
     age = 30;
   }
 
-  public void introduce() {
-    System.out.println("Hi, I'm " + name + " a " + age + " years old " + gender);
+  public String introduce() {
+    return "Hi, I'm " + name + " a " + age + " years old " + gender;
   }
 
-  public void getGoal() {
-    System.out.println("My goal is: Live for the moment!");
+  public String getGoal() {
+    return "My goal is: Live for the moment!";
   }
 }
