@@ -5,7 +5,7 @@ public class Person {
   String gender;
   int age;
 
-  public Person(String name, String gender, int age) {
+  public Person(String name, int age, String gender) {
     this.name = name;
     if (gender != "male" || gender != "female") {
       System.out.println("A persons gender must be either <male> or <female>.");
