@@ -22,13 +22,13 @@ public class Sponsor extends Person {
   }
   public void introduce() {
     System.out.println("Hi, I'm " + name + ", a " + age + " years old " + gender + " who represents " + company + " and hired "
-        + hiredStudents + " students so far");
+        + hiredStudents + " students so far.");
   }
   public void hire() {
     hiredStudents++;
   }
 
   public void getGoal() {
-    System.out.println("Hire brilliant junior software developers.");
+    System.out.println("My goal is: Hire brilliant junior software developers.");
   }
 }
