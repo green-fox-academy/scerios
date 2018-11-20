@@ -4,7 +4,7 @@ public class Student extends Person {
   String previousOrganization;
   int skippedDays;
 
-  public Student(String previousOrganization) {
+  public Student(String name, int age, String gender, String previousOrganization) {
     this.previousOrganization = previousOrganization;
     skippedDays = 0;
   }
