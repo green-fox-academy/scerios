@@ -10,4 +10,8 @@ public class BassGuitar extends StringedInstrument {
     super.name = "Duum-duum-duum";
     super.numberOfStrings = numberOfStrings;
   }
+
+  String sound() {
+    return this.name;
+  }
 }

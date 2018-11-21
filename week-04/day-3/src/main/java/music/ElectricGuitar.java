@@ -10,4 +10,8 @@ public class ElectricGuitar extends StringedInstrument {
     super.name = "Twang";
     super.numberOfStrings = numberOfStrings;
   }
+
+  String sound() {
+    return this.name;
+  }
 }
