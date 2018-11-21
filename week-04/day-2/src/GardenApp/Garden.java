@@ -15,16 +15,20 @@ public class Garden {
 
   public void check() {
     for (int i = 0; i < garden.size(); i++) {
-      if (garden.get(i).needsWater()) {
-        garden.get(i).checkStatus();
-      }
+      garden.get(i).checkStatus();
     }
+    System.out.println();
   }
 
-  public void water (double waterAmount) {
+  public void water(double waterAmount) {
+    double plantsToWater = garden.size();
+    double evenlyWatered = waterAmount / plantsToWater;
     System.out.println("Watering with " + (int)waterAmount);
-
-
+    for (int i = 0; i < garden.size(); i++) {
+      garden.get(i).watering(evenlyWatered);
+      plantsToWater--;
+      waterAmount -= evenlyWatered;
+    }
   }
 }
 
