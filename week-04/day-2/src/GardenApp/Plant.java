@@ -5,7 +5,6 @@ public class Plant {
   double minimalWater;
   double waterlevel;
   double waterAbsorption;
-  boolean needWater;
 
   public Plant(String color) {
     this.color = color;
@@ -33,9 +32,10 @@ public class Plant {
   }
 
   public void checkStatus() {
-    if (needWater) {
+    if (needsWater()) {
       System.out.println("The " + this.color + " " + getClass().getSimpleName() + " needs water.");
+    } else {
+      System.out.println("The " + this.color + " " + getClass().getSimpleName() + " doesn't need water.");
     }
-    System.out.println("The " + this.color + " " +getClass().getSimpleName() + " doesn't need water.");
   }
 }
