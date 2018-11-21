@@ -1,12 +1,12 @@
 package main.java.music;
 
 public class ElectricGuitar extends StringedInstrument {
-  ElectricGuitar() {
+  public ElectricGuitar() {
     super.name = "Twang";
     super.numberOfStrings = 6;
   }
 
-  ElectricGuitar(int numberOfStrings) {
+  public ElectricGuitar(int numberOfStrings) {
     super.name = "Twang";
     super.numberOfStrings = numberOfStrings;
   }
