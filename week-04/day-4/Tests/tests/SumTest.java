@@ -6,17 +6,16 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class SumTest {
+  Sum test = new Sum();
 
   @Test
   public void sumOfElements() {
-    Sum test = new Sum();
     ArrayList<Integer> test1 = new ArrayList<>(Arrays.asList(6, 42, 23, 33, 11, 66));
     assertEquals(181, test.sumOfElements(test1));
   }
 
   @Test (expected = NullPointerException.class)
   public void trickySumOfElements() {
-    Sum test = new Sum();
     ArrayList<Integer> test1 = new ArrayList<>(Arrays.asList());
     ArrayList<Integer> test2 = new ArrayList<>(Arrays.asList(1));
     ArrayList<Integer> test3 = new ArrayList<>(Arrays.asList(6, 42, 23));
