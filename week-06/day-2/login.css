@@ -1,13 +1,14 @@
 * {
+    box-sizing: border-box;
     background-color: #ccc;
 }
 
 .loginBox {
     background-color: white;
     display: block;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 70px;
+    width: 400px;
+    border-radius: 3px;
+    margin: 50px auto;
 }
 
 p {
@@ -19,6 +20,7 @@ p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 23px;
     letter-spacing: 1px;
+    border-radius: 3px;
 }
 
 b {
@@ -39,13 +41,12 @@ fieldset {
 input[type=text],
 input[type=password] {
     background-color: white;
-    padding: 10px 30% 10px 10%;
+    padding: 10px 34% 10px 6%;
     margin-left: 50px;
     margin-top: 5px;
     margin-bottom: 15px;
     display: block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
     border-radius: 3px;
 }
 
@@ -84,5 +85,5 @@ button:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 13px;
     margin-top: -10px;
-    padding-left: 62%;
+    padding-left: 252px;
 }
