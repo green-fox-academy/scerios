@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Webshop Index</title>
 </head>
 <body>
@@ -16,27 +16,34 @@
         <button type="submit" class="sortButton">Most Expensive</button>
     </div1>
     <p>Search for:</p>
-    <input type="text" autofocus placeholder="...something like nike">
+    <input class="search" type="text" autofocus placeholder="...something like nike">
     <button type="submit" class="button">Search</button>
-    <table class="tableExercise">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity of Stock</th>
-        </tr>
-        </thead>
-        <tbody th:each="item : ${item}">
+    <p class="separator">Add new item:</p>
+    <form method="post" action="/addItem">
+        <input class="newItem" name="name" type="text" placeholder="Name" required/></label>
+        <input class="newItem" name="description" type="text" placeholder="Description" required/></label>
+        <input class="newItemNum" name="price" type="number" placeholder="Price" min="0" step="0.1" required/></label>
+        <input class="newItemNum" name="quantity" type="number" placeholder="Quantity" min="0" required/></label>
+        <button class="addButton" type="submit" class="button">Add new item</button>
+        <table class="tableExercise">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity of Stock</th>
+            </tr>
+            </thead>
+            <tbody th:each="item : ${item}">
             <tr th:each="item : ${item}">
                 <td th:text="${item.getName()}"></td>
                 <td th:text="${item.getDescription()}"></td>
                 <td class="number" th:text="${item.getPrice()}"></td>
                 <td class="number" th:text="${item.getQuantityOfStock()}"></td>
             </tr>
-        </tbody>
-    </table>
-
+            </tbody>
+        </table>
+    </form>
 </div>
 </body>
 </html>
