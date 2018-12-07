@@ -1,0 +1,71 @@
+* {
+    background-color: lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    background-color: white;
+    color: rgb(22, 230, 230);
+    border-bottom: 2px solid rgb(22, 230, 230);
+    margin-top: 30px;
+    margin-right: 18px;
+    padding-top: 30px;
+
+}
+
+br {
+    color: rgb(22, 230, 230);
+}
+
+p {
+    background-color: white;
+    color: tomato;
+    margin-bottom: -1px;
+}
+
+div {
+    background-color: white;
+    border-color: black;
+    border-width: 2px;
+    padding-left: 20px;
+    display: block;
+    width: 560px;
+    border-radius: 3px;
+    margin: 50px auto;
+}
+
+div1 {
+    background-color: white;
+}
+
+.sortButton {
+    background-color: tomato;
+    border: 2px solid tomato;
+    color: white;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: tomato;
+    border: 2px solid tomato;
+    color: white;
+    border-radius: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+input {
+    background-color: white;
+    border-color: tomato;
+    border-radius: 5px;
+    border: 2px solid tomato;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 46.2%;
+    font-size: 20px;
+}

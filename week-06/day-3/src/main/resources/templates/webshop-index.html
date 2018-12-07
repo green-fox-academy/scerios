@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <title>Webshop Index</title>
+</head>
+<body>
+<div>
+    <h1>My Shop</h1>
+    <div1>
+        <button type="submit" class="sortButton">Only Available</button>
+        <button type="submit" class="sortButton">Cheapest First</button>
+        <button type="submit" class="sortButton">Contains Nike</button>
+        <button type="submit" class="sortButton">Average Stock</button>
+        <button type="submit" class="sortButton">Most Expensive</button>
+    </div1>
+    <p>Search for:</p>
+    <input type="text" autofocus placeholder="...something like nike">
+    <button type="submit" class="button">Search</button>
+    <tr th:each="item : ${item}">
+        <td th:text="${item.getName()}"></td>
+        <td th:text="${item.getDescription()}"></td>
+        <td th:text="${item.getPrice()}"></td>
+        <td th:text="${item.getQuantityOfStock()}"></td>
+    </tr>
+</div>
+</body>
+</html>
