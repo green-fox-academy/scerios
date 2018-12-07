@@ -5,16 +5,12 @@
 
 h1 {
     background-color: white;
-    color: rgb(22, 230, 230);
-    border-bottom: 2px solid rgb(22, 230, 230);
+    color: aqua;
+    border-bottom: 2px solid aqua;
     margin-top: 30px;
     margin-right: 18px;
     padding-top: 30px;
 
-}
-
-br {
-    color: rgb(22, 230, 230);
 }
 
 p {
@@ -47,7 +43,7 @@ div1 {
 
 .button {
     background-color: tomato;
-    border: 2px solid tomato;
+    border: 3px solid tomato;
     color: white;
     border-radius: 5px;
     padding-top: 8px;
@@ -63,9 +59,32 @@ input {
     background-color: white;
     border-color: tomato;
     border-radius: 5px;
-    border: 2px solid tomato;
+    border: 3px solid tomato;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-right: 46.2%;
+    padding-right: 45.5%;
     font-size: 20px;
+}
+
+table {
+    margin-top: 20px;
+    background-color: white;
+    border-spacing: 2px;
+    border: 1px solid white;
+}
+
+th, td{
+    background-color: white;
+    width: 111.5px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+th {
+    background-color: aqua;
+    text-align: center;
+}
+
+.number {
+    text-align: center;
 }

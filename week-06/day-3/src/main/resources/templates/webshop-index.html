@@ -18,12 +18,25 @@
     <p>Search for:</p>
     <input type="text" autofocus placeholder="...something like nike">
     <button type="submit" class="button">Search</button>
-    <tr th:each="item : ${item}">
-        <td th:text="${item.getName()}"></td>
-        <td th:text="${item.getDescription()}"></td>
-        <td th:text="${item.getPrice()}"></td>
-        <td th:text="${item.getQuantityOfStock()}"></td>
-    </tr>
+    <table class="tableExercise">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity of Stock</th>
+        </tr>
+        </thead>
+        <tbody th:each="item : ${item}">
+            <tr th:each="item : ${item}">
+                <td th:text="${item.getName()}"></td>
+                <td th:text="${item.getDescription()}"></td>
+                <td class="number" th:text="${item.getPrice()}"></td>
+                <td class="number" th:text="${item.getQuantityOfStock()}"></td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>
 </body>
 </html>
