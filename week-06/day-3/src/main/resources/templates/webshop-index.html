@@ -34,8 +34,8 @@
                 <th>Quantity of Stock</th>
             </tr>
             </thead>
-            <tbody th:each="item : ${item}">
-            <tr th:each="singleItem : ${item}">
+            <tbody>
+            <tr th:each="item : ${item}">
                 <td th:text="${item.getName()}"></td>
                 <td th:text="${item.getDescription()}"></td>
                 <td class="number" th:text="${item.getPrice()}"></td>
