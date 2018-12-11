@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +19,7 @@ public class WebshopController {
     return "webshop-index";
   }
 
-  @RequestMapping(value = "/addItem", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+  @PostMapping(value = "/", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
   public String addItem(@RequestBody MultiValueMap<String, String> formData) {
     Item newItem = new Item(
         formData.toSingleValueMap().get("name"),
@@ -27,6 +28,6 @@ public class WebshopController {
         Integer.parseInt(formData.toSingleValueMap().get("quantity"))
     );
     Stock.listOfItems.add(newItem);
-    return "webshop-index";
+    return "redirect:/";
   }
 }
