@@ -53,7 +53,7 @@ public class Main {
         whiteSorted[i]= 14;
       }
 
-      if (black[i].charAt(0) == 'J') {
+§      if (black[i].charAt(0) == 'J') {
         blackSorted[i]= 11;
       } else if (black[i].charAt(0) == 'Q') {
         blackSorted[i]= 12;
