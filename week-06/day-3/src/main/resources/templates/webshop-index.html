@@ -25,25 +25,25 @@
         <input class="newItemNum" name="price" type="number" placeholder="Price" min="0" step="0.1" required/></label>
         <input class="newItemNum" name="quantity" type="number" placeholder="Quantity" min="0" required/></label>
         <button class="addButton" type="submit">Add new item</button>
-        <table class="tableExercise">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Quantity of Stock</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="item : ${item}">
-                <td th:text="${item.getName()}"></td>
-                <td th:text="${item.getDescription()}"></td>
-                <td class="number" th:text="${item.getPrice()}"></td>
-                <td class="number" th:text="${item.getQuantityOfStock()}"></td>
-            </tr>
-            </tbody>
-        </table>
     </form>
+    <table class="tableExercise">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity of Stock</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item : ${item}">
+            <td th:text="${item.getName()}"></td>
+            <td th:text="${item.getDescription()}"></td>
+            <td class="number" th:text="${item.getPrice()}"></td>
+            <td class="number" th:text="${item.getQuantityOfStock()}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
