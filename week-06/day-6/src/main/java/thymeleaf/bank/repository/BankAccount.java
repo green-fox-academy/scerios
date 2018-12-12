@@ -2,13 +2,13 @@ package thymeleaf.bank.repository;
 
 public class BankAccount {
   private String name;
-  private String animaltype;
+  private String animalType;
   public double balance;
 
   public BankAccount(String name, double balance, String animaltype) {
     this.name = name;
     this.balance = balance;
-    this.animaltype = animaltype;
+    this.animalType = animaltype;
   }
 
   public String getName() {
@@ -19,12 +19,12 @@ public class BankAccount {
     this.name = name;
   }
 
-  public String getAnimaltype() {
-    return animaltype;
+  public String getAnimalType() {
+    return animalType;
   }
 
-  public void setAnimaltype(String animaltype) {
-    this.animaltype = animaltype;
+  public void setAnimalType(String animalType) {
+    this.animalType = animalType;
   }
 
   public double getBalance() {
