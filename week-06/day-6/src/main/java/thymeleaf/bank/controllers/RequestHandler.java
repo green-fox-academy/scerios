@@ -21,7 +21,7 @@ public class RequestHandler {
     return "show";
   }
 
-  @PostMapping(value = "/show", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+  @PostMapping(value = "/add-account", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
   public String addNewAccount(@RequestBody MultiValueMap<String, String> account) {
     BankAccount bankAccount = new BankAccount(
         account.toSingleValueMap().get("name"),
