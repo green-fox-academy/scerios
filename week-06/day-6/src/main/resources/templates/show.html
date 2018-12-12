@@ -15,9 +15,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="bankaccount : ${bankaccount}">
+        <tr th:each="bankaccount : ${account}">
             <td th:text="${bankaccount.getName()}"></td>
-            <td th:text="${bankaccout.getBalance()}"></td>
+            <td th:text="${bankaccount.getBalance()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
         </tr>
         </tbody>
