@@ -10,6 +10,7 @@
     <table class="table">
         <thead>
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Animal Type</th>
@@ -17,8 +18,9 @@
         </thead>
         <tbody>
         <tr th:each="bankaccount : ${account}">
+            <td th:text="${bankaccountStat.count}"></td>
             <td th:text="${bankaccount.getName()}"></td>
-            <td th:text="${bankaccount.getBalanceWithCurrency()}"></td>
+            <td class="balance" th:text="${bankaccount.getBalanceWithCurrency()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
         </tr>
         </tbody>
