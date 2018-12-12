@@ -8,10 +8,10 @@ public class BankAccount {
   private String balanceWithCurrency;
   public static String swanky = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
 
-  public BankAccount(String name, float balance, String animaltype) {
+  public BankAccount(String name, float balance, String animalType) {
     this.name = name;
     this.balance = balance;
-    this.animalType = animaltype;
+    this.animalType = animalType;
     this.formattedBalance = String.format("%.02f", balance);
     this.balanceWithCurrency = formattedBalance + " Zebra";
   }
