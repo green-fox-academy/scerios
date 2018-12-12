@@ -9,6 +9,10 @@ public class AccountsDatabase {
   private AccountsDatabase() {
     this.listOfAccounts = new ArrayList<>();
     this.listOfAccounts.add(new BankAccount("Simba", 2000, "lion"));
+    this.listOfAccounts.add(new BankAccount("Timon", 150, "meerkat"));
+    this.listOfAccounts.add(new BankAccount("Pumbaa", 100, "warthog"));
+    this.listOfAccounts.add(new BankAccount("Zazu", 650, "hornbill"));
+    this.listOfAccounts.add(new BankAccount("Rafiki", 10, "mandrill"));
   }
 
   public static AccountsDatabase getInstance() {
