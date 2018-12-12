@@ -4,16 +4,16 @@ import com.webshop.Item;
 import java.util.ArrayList;
 
 public class Stock {
-  public static ArrayList<Item> listOfItems = new ArrayList<>();
+  public static ArrayList<Item> stock = new ArrayList<>();
 
   public Stock() {
   }
 
-  public ArrayList<Item> getListOfItems() {
-    return listOfItems;
+  public ArrayList<Item> getstock() {
+    return stock;
   }
 
   public void addItems(Item item) {
-    listOfItems.add(item);
+    stock.add(item);
   }
 }

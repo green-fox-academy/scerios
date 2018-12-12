@@ -15,7 +15,7 @@ public class WebshopController {
 
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String getitems(Model model) {
-    model.addAttribute("item", Stock.listOfItems);
+    model.addAttribute("item", Stock.stock);
     return "webshop-index";
   }
 
@@ -27,7 +27,7 @@ public class WebshopController {
         Double.parseDouble(formData.toSingleValueMap().get("price")),
         Integer.parseInt(formData.toSingleValueMap().get("quantity"))
     );
-    Stock.listOfItems.add(newItem);
+    Stock.stock.add(newItem);
     return "redirect:/";
   }
 }
