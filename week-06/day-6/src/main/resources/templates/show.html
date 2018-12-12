@@ -15,6 +15,7 @@
             <th>Balance</th>
             <th>Animal Type</th>
             <th>Is He A King?</th>
+            <th>Good or Bad?</th>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
             <td class="balance" th:text="${bankaccount.getBalanceWithCurrency()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
             <td th:text="${bankaccount.isKing()}"></td>
+            <td th:text="${bankaccount.getPoliceRecord()}"></td>
         </tr>
         </tbody>
     </table>

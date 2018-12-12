@@ -7,11 +7,13 @@ public class BankAccount {
   private String formattedBalance;
   private String balanceWithCurrency;
   private boolean isKing = false;
+  private String policeRecord;
 
-  public BankAccount(String name, float balance, String animalType) {
+  public BankAccount(String name, float balance, String animalType, String policeRecord) {
     if (animalType == "lion") {
       isKing = true;
     }
+    this.policeRecord = policeRecord;
     this.name = name;
     this.balance = balance;
     this.animalType = animalType;
@@ -23,35 +25,19 @@ public class BankAccount {
     return name;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
   public String getAnimalType() {
     return animalType;
-  }
-
-  public void setAnimalType(String animalType) {
-    this.animalType = animalType;
-  }
-
-  public double getBalance() {
-    return balance;
-  }
-
-  public void setBalance(float balance) {
-    this.balance = balance;
   }
 
   public String getBalanceWithCurrency() {
     return balanceWithCurrency;
   }
 
-  public void setBalanceWitCurrency(String balanceWitCurrency) {
-    this.balanceWithCurrency = balanceWitCurrency;
-  }
-
   public boolean isKing() {
     return isKing;
+  }
+
+  public String getPoliceRecord() {
+    return policeRecord;
   }
 }
