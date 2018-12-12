@@ -6,8 +6,12 @@ public class BankAccount {
   public float balance;
   private String formattedBalance;
   private String balanceWithCurrency;
+  private boolean isKing = false;
 
   public BankAccount(String name, float balance, String animalType) {
+    if (animalType == "lion") {
+      isKing = true;
+    }
     this.name = name;
     this.balance = balance;
     this.animalType = animalType;
@@ -45,5 +49,9 @@ public class BankAccount {
 
   public void setBalanceWitCurrency(String balanceWitCurrency) {
     this.balanceWithCurrency = balanceWitCurrency;
+  }
+
+  public boolean isKing() {
+    return isKing;
   }
 }

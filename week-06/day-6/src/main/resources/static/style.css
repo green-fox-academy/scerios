@@ -105,7 +105,7 @@ table {
 
 th, td{
     background-color: white;
-    width: 111.5px;
+    width: 150px;
     padding: 10px;
     border: 1px solid white;
     text-align: center;
@@ -122,4 +122,14 @@ th {
 
 .number {
     text-align: center;
+}
+
+.true {
+    text-decoration: underline;
+    text-decoration-color: gold;
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 20px;
+
+    color: purple;
 }

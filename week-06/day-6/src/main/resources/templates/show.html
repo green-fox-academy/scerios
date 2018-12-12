@@ -14,14 +14,16 @@
             <th>Name</th>
             <th>Balance</th>
             <th>Animal Type</th>
+            <th>Is He A King?</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="bankaccount : ${account}">
+        <tr th:each="bankaccount : ${account}" th:class="${bankaccount.isKing()} ? 'true' : 'false'">
             <td th:text="${bankaccountStat.count}"></td>
             <td th:text="${bankaccount.getName()}"></td>
             <td class="balance" th:text="${bankaccount.getBalanceWithCurrency()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
+            <td th:text="${bankaccount.isKing()}"></td>
         </tr>
         </tbody>
     </table>
