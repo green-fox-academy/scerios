@@ -3,12 +3,16 @@ package thymeleaf.bank.repository;
 public class BankAccount {
   private String name;
   private String animalType;
-  public double balance;
+  public float balance;
+  private String formattedBalance;
+  private String balanceWithCurrency;
 
-  public BankAccount(String name, double balance, String animaltype) {
+  public BankAccount(String name, float balance, String animaltype) {
     this.name = name;
     this.balance = balance;
     this.animalType = animaltype;
+    this.formattedBalance = String.format("%.02f", balance);
+    this.balanceWithCurrency = formattedBalance + " Zebra";
   }
 
   public String getName() {
@@ -31,7 +35,15 @@ public class BankAccount {
     return balance;
   }
 
-  public void setBalance(double balance) {
+  public void setBalance(float balance) {
     this.balance = balance;
+  }
+
+  public String getBalanceWithCurrency() {
+    return balanceWithCurrency;
+  }
+
+  public void setBalanceWitCurrency(String balanceWitCurrency) {
+    this.balanceWithCurrency = balanceWitCurrency;
   }
 }
