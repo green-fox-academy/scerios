@@ -6,6 +6,7 @@ public class BankAccount {
   public float balance;
   private String formattedBalance;
   private String balanceWithCurrency;
+  public static String swanky = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
 
   public BankAccount(String name, float balance, String animaltype) {
     this.name = name;
