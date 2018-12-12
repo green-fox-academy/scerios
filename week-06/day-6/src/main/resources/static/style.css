@@ -108,11 +108,16 @@ th, td{
     width: 111.5px;
     padding: 10px;
     border: 1px solid white;
+    text-align: center;
 }
 
 th {
     background-color: aqua;
     text-align: center;
+}
+
+.balance {
+    text-align: right;
 }
 
 .number {
