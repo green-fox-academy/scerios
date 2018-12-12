@@ -3,7 +3,7 @@ package thymeleaf.bank.repository;
 public class BankAccount {
   private String name;
   private String animaltype;
-  private double balance;
+  public double balance;
 
   public BankAccount(String name, double balance, String animaltype) {
     this.name = name;
