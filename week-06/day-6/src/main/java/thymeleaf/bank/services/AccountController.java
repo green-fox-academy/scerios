@@ -7,16 +7,16 @@ import java.util.ArrayList;
 
 public class AccountController {
 
-  public void addAccount(BankAccount account) {
+  public void addAccount(BankAccount newAccount) {
     boolean isThereAccount = false;
-    for (BankAccount bankAccount : AccountsDatabase.getInstance().getListOfAccounts()) {
-      if (bankAccount.getName() == account.getName()) {
+    for (BankAccount existingAccount : AccountsDatabase.getInstance().getListOfAccounts()) {
+      if (existingAccount.getName().equals(newAccount.getName())) {
         isThereAccount = true;
-        bankAccount.balance += account.balance;
+        existingAccount.balance += newAccount.balance;
       }
     }
     if (!isThereAccount) {
-      AccountsDatabase.getInstance().addAccount(account);
+      AccountsDatabase.getInstance().addAccount(newAccount);
     }
   }
 
@@ -25,9 +25,9 @@ public class AccountController {
   }
 
   public BankAccount getBankAccount(String name) {
-    for (BankAccount bankAccount : AccountsDatabase.getInstance().getListOfAccounts()) {
-      if (bankAccount.getName() == name) {
-        return bankAccount;
+    for (BankAccount existingAccount : AccountsDatabase.getInstance().getListOfAccounts()) {
+      if (existingAccount.getName() == name) {
+        return existingAccount;
       }
     }
     return null;
