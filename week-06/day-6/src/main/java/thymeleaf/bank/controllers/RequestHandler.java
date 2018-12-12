@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import thymeleaf.bank.repository.AccountsDatabase;
 
-
 @Controller
 public class RequestHandler {
 
