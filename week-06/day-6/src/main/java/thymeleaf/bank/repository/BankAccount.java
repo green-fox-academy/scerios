@@ -1,4 +1,4 @@
-package thymeleaf.bank;
+package thymeleaf.bank.repository;
 
 public class BankAccount {
   private String name;

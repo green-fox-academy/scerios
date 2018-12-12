@@ -1,13 +1,10 @@
-package thymeleaf.bank.controllers;
+package thymeleaf.bank.services;
 
 import thymeleaf.bank.repository.BankAccount;
 
-import java.util.ArrayList;
-
 public class AccountController {
-  ArrayList <BankAccount> listOfAccounts = new ArrayList<>();
 
-  public AccountController() {
-    listOfAccounts.add(new BankAccount("Simba", 2000, "lion"));
+  public void addAccount(BankAccount account) {
+
   }
 }
