@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Show Details of Account</title>
+
 </head>
 <body>
 <form method="get" action="/show">
@@ -17,7 +18,7 @@
         <tbody>
         <tr th:each="bankaccount : ${account}">
             <td th:text="${bankaccount.getName()}"></td>
-            <td th:text="${bankaccount.getBalance()}"></td>
+            <td th:text="${bankaccount.getBalanceWithCurrency()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
         </tr>
         </tbody>
