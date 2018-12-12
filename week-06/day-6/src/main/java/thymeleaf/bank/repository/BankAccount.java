@@ -7,13 +7,11 @@ public class BankAccount {
   private String formattedBalance;
   private String balanceWithCurrency;
   private boolean isKing = false;
-  private String policeRecord;
 
-  public BankAccount(String name, float balance, String animalType, String policeRecord) {
+  public BankAccount(String name, float balance, String animalType) {
     if (animalType == "lion") {
       isKing = true;
     }
-    this.policeRecord = policeRecord;
     this.name = name;
     this.balance = balance;
     this.animalType = animalType;
@@ -35,9 +33,5 @@ public class BankAccount {
 
   public boolean isKing() {
     return isKing;
-  }
-
-  public String getPoliceRecord() {
-    return policeRecord;
   }
 }

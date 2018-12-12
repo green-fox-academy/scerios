@@ -15,7 +15,6 @@
             <th>Balance</th>
             <th>Animal Type</th>
             <th>Is He A King?</th>
-            <th>Good or Bad?</th>
         </tr>
         </thead>
         <tbody>
@@ -25,10 +24,15 @@
             <td class="balance" th:text="${bankaccount.getBalanceWithCurrency()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
             <td th:text="${bankaccount.isKing()}"></td>
-            <td th:text="${bankaccount.getPoliceRecord()}"></td>
         </tr>
         </tbody>
     </table>
+</form>
+<form method="post" action="/show">
+    <input class="newItem" name="name" type="text" placeholder="Name" required>
+    <input class="newItemNum" name="balance" type="number" min="0" step="0.5" placeholder="Balance" required>
+    <input class="newItem" name="animalType" type="text" placeholder="Type of Animal" required>
+    <button class="addButton">Add New Account</button>
 </form>
 </body>
 </html>
