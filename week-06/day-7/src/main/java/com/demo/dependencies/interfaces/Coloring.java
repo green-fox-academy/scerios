@@ -1,5 +1,5 @@
-package com.demo.dependencies.controller;
+package com.demo.dependencies.interfaces;
 
 public interface Coloring {
-  void printColor();
+  void printColor(String color);
 }
