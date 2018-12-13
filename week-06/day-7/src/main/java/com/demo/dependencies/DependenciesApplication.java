@@ -8,9 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DependenciesApplication implements CommandLineRunner {
+  Printer printer;
 
   @Autowired
-  Printer printer;
+  public DependenciesApplication(Printer printer) {
+    this.printer = printer;
+  }
 
   public static void main(String[] args) {
     SpringApplication.run(DependenciesApplication.class, args);
