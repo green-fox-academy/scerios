@@ -8,16 +8,13 @@ import java.util.ArrayList;
 public class AccountController {
 
   public void addAccount(BankAccount newAccount) {
-    boolean isThereAccount = false;
     for (BankAccount existingAccount : AccountsDatabase.getInstance().getListOfAccounts()) {
       if (existingAccount.getName().equals(newAccount.getName())) {
-        isThereAccount = true;
         existingAccount.balance += newAccount.balance;
+        return;
       }
     }
-    if (!isThereAccount) {
-      AccountsDatabase.getInstance().addAccount(newAccount);
-    }
+    AccountsDatabase.getInstance().addAccount(newAccount);
   }
 
   public ArrayList<BankAccount> getBankAccounts() {
@@ -26,7 +23,7 @@ public class AccountController {
 
   public BankAccount getBankAccount(String name) {
     for (BankAccount existingAccount : AccountsDatabase.getInstance().getListOfAccounts()) {
-      if (existingAccount.getName() == name) {
+      if (existingAccount.getName().equals(name)) {
         return existingAccount;
       }
     }

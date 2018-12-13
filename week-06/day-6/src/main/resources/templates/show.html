@@ -21,7 +21,7 @@
         <tr th:each="bankaccount : ${account}" th:class="${bankaccount.isKing()} ? 'true' : 'false'">
             <td th:text="${bankaccountStat.count}"></td>
             <td th:text="${bankaccount.getName()}"></td>
-            <td class="balance" th:text="${bankaccount.getBalanceWithCurrency()}"></td>
+            <td class="balance" th:text="${bankaccount.getBalance()}"></td>
             <td th:text="${bankaccount.getAnimalType()}"></td>
             <td th:text="${bankaccount.isKing()}"></td>
         </tr>
