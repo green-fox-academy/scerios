@@ -8,6 +8,7 @@ public class PirateRepository {
 
   private PirateRepository() {
     this.piratesRepo = new ArrayList<>();
+    this.piratesRepo.add(new Pirate("Jack", "male"));
   }
 
   public static PirateRepository getInstance() {

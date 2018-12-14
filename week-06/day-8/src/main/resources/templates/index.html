@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Pirates Club</title>
@@ -8,9 +8,11 @@
     </nav>
 </head>
 <body>
-<form method="get" action="/">
-    <img src="https://png.pngtree.com/element_pic/16/11/27/e1a5a1bd1e5b8ca6f7b4ed197afb9b6f.jpg" alt="Eyed viking game characters vector material  png clipart from pngtree.com">
-    <p>'tis here be a scurvy pirate'o yers! Eatin' grub 'n drink rums. He knows 2 tricks!</p>
+<form method="get" th:object="${pirate}" action="/">
+    <img src="https://png.pngtree.com/element_pic/16/11/27/e1a5a1bd1e5b8ca6f7b4ed197afb9b6f.jpg"
+         alt="Eyed viking game characters vector material  png clipart from pngtree.com">
+    <p th:text="'tis here be: ' + ${pirate.getName()} +
+      ', a scurvy pirate o yers! Eatin: grub n drink rums. He knows 2 tricks!'"></p>
 </form>
 </body>
 </html>

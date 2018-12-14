@@ -19,6 +19,10 @@ public class RepositoryServices {
     return PirateRepository.getInstance().getPiratesRepo();
   }
 
+  public String getName(Pirate pirate) {
+    return pirate.name;
+  }
+
   public Pirate checkPirates(String name) {
     return (Pirate) this.repoService
         .getPirates()
