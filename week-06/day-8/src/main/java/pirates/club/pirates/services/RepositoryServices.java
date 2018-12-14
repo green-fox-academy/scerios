@@ -1,6 +1,10 @@
 package pirates.club.pirates.services;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
 public class RepositoryServices {
+  private RepositoryServices repoService;
 
   public void addPirate(Pirate newPirate) {
     for (Pirate existingPirate : PirateRepository.getInstance().getPiratesRepo()) {
@@ -11,13 +15,15 @@ public class RepositoryServices {
     PirateRepository.getInstance().addPirate(newPirate);
   }
 
-  public Pirate checkPirates(Pirate newPirate) {
+  public ArrayList<Pirate> getPirates() {
+    return PirateRepository.getInstance().getPiratesRepo();
+  }
 
-    for (Pirate existingPirate : PirateRepository.getInstance().getPiratesRepo()) {
-      if (existingPirate.getName().equals(newPirate.getName())) {
-        return existingPirate;
-      }
-    }
-    return null;
+  public Pirate checkPirates(String name) {
+    return (Pirate) this.repoService
+        .getPirates()
+        .stream()
+        .filter(pirate -> pirate.name.equals(name))
+        .collect(Collectors.toList());
   }
 }
