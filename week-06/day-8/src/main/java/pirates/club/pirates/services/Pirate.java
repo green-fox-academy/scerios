@@ -5,7 +5,7 @@ public class Pirate {
   String gender;
   int knownTricks;
 
-  Pirate(String name, String gender) {
+  public Pirate(String name, String gender) {
     this.name = name;
     this.gender = gender;
   }
