@@ -1,4 +1,4 @@
-package pirate.club.landlubber;
+package pirates.club.pirates;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class LandlubberApplicationTests {
+public class PiratesApplicationTests {
 
   @Test
   public void contextLoads() {

@@ -1,13 +1,13 @@
-package pirate.club.landlubber;
+package pirates.club.pirates;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LandlubberApplication {
+public class PiratesApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(LandlubberApplication.class, args);
+    SpringApplication.run(PiratesApplication.class, args);
   }
 
 }
