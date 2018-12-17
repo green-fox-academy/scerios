@@ -15,7 +15,6 @@ public class ToDo {
   private boolean isDone;
 
   public ToDo(String title) {
-    this.ID = ID;
     this.title = title;
     this.isUrgent = false;
     this.isDone = false;
