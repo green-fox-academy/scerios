@@ -14,7 +14,7 @@ public class ToDo {
   private boolean isUrgent;
   private boolean isDone;
 
-  public ToDo(long ID, String title, boolean isUrgent, boolean isDone) {
+  public ToDo(String title) {
     this.ID = ID;
     this.title = title;
     this.isUrgent = false;
