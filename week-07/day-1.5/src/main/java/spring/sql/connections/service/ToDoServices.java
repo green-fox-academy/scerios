@@ -25,4 +25,8 @@ public class ToDoServices {
   public void addToDo(ToDo toDo) {
     this.repository.save(toDo);
   }
+
+  public ArrayList<ToDo> filterIfIsDone() {
+    return this.repository.findByDoneTrue();
+  }
 }

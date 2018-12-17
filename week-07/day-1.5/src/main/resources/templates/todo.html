@@ -19,8 +19,8 @@
             <tr th:each="todo : ${todos}">
                 <td th:text="${todo.getID()}"></td>
                 <td th:text="${todo.getTitle()}"></td>
+                <td th:text="${todo.done()}"></td>
                 <td th:text="${todo.isUrgent()}"></td>
-                <td th:text="${todo.isDone()}"></td>
             </tr>
         </tbody>
     </table>

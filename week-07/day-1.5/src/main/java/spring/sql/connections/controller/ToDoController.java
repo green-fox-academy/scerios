@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import spring.sql.connections.service.ToDoServices;
 
 @Controller
@@ -18,8 +19,12 @@ public class ToDoController {
   }
 
   @GetMapping({"/", "/list"})
-  public String getList(Model model) {
-    model.addAttribute("todos", services.getListOfToDos());
+  public String getList(Model model, @RequestParam(required = false) boolean isActive) {
+    if (isActive) {
+      model.addAttribute("todos", services.filterIfIsDone());
+    } else {
+      model.addAttribute("todos", services.getListOfToDos());
+    }
     return "todo";
   }
 }

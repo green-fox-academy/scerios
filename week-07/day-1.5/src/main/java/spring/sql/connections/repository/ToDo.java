@@ -10,7 +10,7 @@ public class ToDo {
   private long ID;
   private String title;
   private boolean isUrgent;
-  private boolean isDone;
+  private boolean done;
 
   public ToDo() {
 
@@ -19,7 +19,7 @@ public class ToDo {
   public ToDo(String title) {
     this.title = title;
     this.isUrgent = false;
-    this.isDone = false;
+    this.done = false;
   }
 
   public long getID() {
@@ -34,7 +34,7 @@ public class ToDo {
     return isUrgent;
   }
 
-  public boolean isDone() {
-    return isDone;
+  public boolean done() {
+    return done;
   }
 }
