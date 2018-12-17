@@ -27,6 +27,6 @@ public class ToDoServices {
   }
 
   public ArrayList<ToDo> filterIfIsNotDone() {
-    return this.repository.findByDoneTrue();
+    return this.repository.findByDoneFalse();
   }
 }

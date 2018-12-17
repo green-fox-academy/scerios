@@ -7,5 +7,5 @@ import java.util.ArrayList;
 
 @Repository
 public interface ToDoRepository extends CrudRepository<ToDo, Long> {
-  ArrayList<ToDo> findByDoneTrue();
+  ArrayList<ToDo> findByDoneFalse();
 }
