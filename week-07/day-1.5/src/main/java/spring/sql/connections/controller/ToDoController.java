@@ -20,8 +20,8 @@ public class ToDoController {
 
   @GetMapping({"/", "/list"})
   public String getList(Model model, @RequestParam(required = false) boolean isActive) {
-    if (isActive) {
-      model.addAttribute("todos", services.filterIfIsDone());
+    if (!isActive) {
+      model.addAttribute("todos", services.filterIfIsNotDone());
     } else {
       model.addAttribute("todos", services.getListOfToDos());
     }

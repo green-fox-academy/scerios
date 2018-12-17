@@ -26,7 +26,7 @@ public class ToDoServices {
     this.repository.save(toDo);
   }
 
-  public ArrayList<ToDo> filterIfIsDone() {
+  public ArrayList<ToDo> filterIfIsNotDone() {
     return this.repository.findByDoneTrue();
   }
 }
