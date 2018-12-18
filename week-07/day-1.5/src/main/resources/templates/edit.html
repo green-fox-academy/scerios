@@ -6,8 +6,8 @@
 </head>
 <body>
 <h1>Edit your todo:</h1>
-<form th:object="${todos}" method="post">
-    <input type="text" th:field="*{title}" placeholder="Change your todo here" autofocus required>
+<form action="#" th:object="${todos}" method="post">
+    <input type="text" th:field="*{title}" autofocus required>
     <p>Urgent?</p>
     <input type="checkbox" th:field="*{urgent}">
     <p>Done?</p>

@@ -23,7 +23,7 @@ public class ToDoServices {
   }
 
   public ToDo getToDoByID(long id) {
-    return repository.findById(id).orElse(null);
+    return repository.findById(id).get();
 
   }
 
