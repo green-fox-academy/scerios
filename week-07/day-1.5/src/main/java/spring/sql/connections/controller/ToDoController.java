@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import spring.sql.connections.repository.ToDo;
 import spring.sql.connections.service.ToDoServices;
 
+import java.util.stream.Collectors;
+
 @Controller
 @RequestMapping("/")
 public class ToDoController {
@@ -24,6 +26,15 @@ public class ToDoController {
     } else {
       model.addAttribute("todos", services.getListOfToDos());
     }
+    return "todo";
+  }
+
+  @GetMapping("/active")
+  public String activeTodos(@RequestParam(name = "isActive", required = false) Model model) {
+    model.addAttribute("todos", services.filterIfIsNotDone()
+        .stream()
+        .filter(todo -> !todo.isDone())
+        .collect(Collectors.toList()));
     return "todo";
   }
 

@@ -9,16 +9,15 @@ public class ToDo {
   @Id
   private long ID;
   private String title;
-  private boolean isUrgent;
+  private boolean urgent;
   private boolean done;
 
   public ToDo() {
-
   }
 
   public ToDo(String title) {
     this.title = title;
-    this.isUrgent = false;
+    this.urgent = false;
     this.done = false;
   }
 
@@ -31,7 +30,11 @@ public class ToDo {
   }
 
   public boolean isUrgent() {
-    return isUrgent;
+    return urgent;
+  }
+
+  public boolean isDone() {
+    return done;
   }
 
   public void setTitle(String title) {
@@ -39,14 +42,10 @@ public class ToDo {
   }
 
   public void setUrgent(boolean urgent) {
-    isUrgent = urgent;
+    this.urgent = urgent;
   }
 
   public void setDone(boolean done) {
     this.done = done;
-  }
-
-  public boolean done() {
-    return done;
   }
 }
