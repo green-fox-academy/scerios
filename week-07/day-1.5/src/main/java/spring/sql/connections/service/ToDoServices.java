@@ -26,6 +26,10 @@ public class ToDoServices {
     this.repository.save(toDo);
   }
 
+  public void deleteTodo(Long id) {
+    repository.deleteById(id);
+  }
+
   public ArrayList<ToDo> filterIfIsNotDone() {
     return this.repository.findByDoneFalse();
   }
