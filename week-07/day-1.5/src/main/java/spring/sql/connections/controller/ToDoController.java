@@ -45,7 +45,7 @@ public class ToDoController {
   }
 
   @PostMapping("add")
-  public String addToDo(@ModelAttribute(value = "todos") ToDo todos) {
+  public String addToDo(@ModelAttribute("todos") ToDo todos) {
     services.addToDo(todos);
     return "redirect:/";
   }
@@ -53,6 +53,18 @@ public class ToDoController {
   @GetMapping("/{id}/delete")
   public String deleteTodo(@PathVariable long id) {
     services.deleteTodo(id);
+    return "redirect:/";
+  }
+
+  @GetMapping("/{id}/edit")
+  public String getEditWindow(Model model, @PathVariable long id) {
+    model.addAttribute("todos", services.getToDoByID(id));
+    return "edit";
+  }
+
+  @PostMapping("/{id}/edit")
+  public String editToDo(@ModelAttribute("todos") ToDo todos) {
+    services.addToDo(todos);
     return "redirect:/";
   }
 }

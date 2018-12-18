@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Edit todo</title>
+</head>
+<body>
+<h1>Edit your todo:</h1>
+<form th:object="${todos}" method="post">
+    <input type="text" th:field="*{title}" placeholder="Change your todo here" autofocus required>
+    <p>Urgent?</p>
+    <input type="checkbox" th:field="*{urgent}">
+    <p>Done?</p>
+    <input type="checkbox" th:field="*{done}">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -22,6 +22,11 @@ public class ToDoServices {
     return toDoList;
   }
 
+  public ToDo getToDoByID(long id) {
+    return repository.findById(id).orElse(null);
+
+  }
+
   public void addToDo(ToDo toDo) {
     this.repository.save(toDo);
   }
