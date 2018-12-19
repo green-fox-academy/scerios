@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>What would you like to do?</h1>
-    <form th:object="${todos}" method="post">
+    <form th:object="${todo}" method="post">
         <input type="text" th:field="*{title}" placeholder="Write your todo here" autofocus required>
         <p>Urgent?</p>
         <input type="checkbox" th:field="*{urgent}">

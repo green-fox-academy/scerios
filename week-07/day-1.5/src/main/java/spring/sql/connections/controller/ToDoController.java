@@ -22,31 +22,37 @@ public class ToDoController {
   @GetMapping({"/", "/list"})
   public String getList(Model model, @RequestParam(required = false) boolean isActive) {
     if (isActive) {
-      model.addAttribute("todos", services.filterIfIsNotDone());
+      model.addAttribute("todo", services.filterIfIsNotDone());
     } else {
-      model.addAttribute("todos", services.getListOfToDos());
+      model.addAttribute("todo", services.getListOfToDos());
     }
     return "todo";
   }
 
   @GetMapping("/active")
-  public String activeTodos(@RequestParam(name = "isActive", required = false) Model model) {
-    model.addAttribute("todos", services.filterIfIsNotDone()
+  public String activeTodos(@RequestParam(name = "isActive", required = false) boolean isActive, Model model) {
+    model.addAttribute("todo", services.filterIfIsNotDone()
         .stream()
         .filter(todo -> !todo.isDone())
         .collect(Collectors.toList()));
     return "todo";
   }
 
+  @GetMapping("search")
+  public String search( Model model, @RequestParam ("search") String search) {
+    model.addAttribute("todo", services.search(search));
+    return "todo";
+  }
+
   @GetMapping("add")
-  public String getAddWindow(Model model, @ModelAttribute(value = "todos") ToDo todos) {
-    model.addAttribute("todos", todos);
+  public String getAddWindow(Model model, @ModelAttribute(value = "todo") ToDo todo) {
+    model.addAttribute("todo", todo);
     return "/add";
   }
 
   @PostMapping("add")
-  public String addToDo(@ModelAttribute("todos") ToDo todos) {
-    services.addToDo(todos);
+  public String addToDo(@ModelAttribute("todo") ToDo todo) {
+    services.addToDo(todo);
     return "redirect:/";
   }
 
@@ -58,13 +64,13 @@ public class ToDoController {
 
   @GetMapping("/{id}/edit")
   public String getEditWindow(Model model, @PathVariable long id) {
-    model.addAttribute("todos", services.getToDoByID(id));
+    model.addAttribute("todo", services.getToDoByID(id));
     return "edit";
   }
 
   @PostMapping("/{id}/edit")
-  public String editToDo(@ModelAttribute("todos") ToDo todos) {
-    services.addToDo(todos);
+  public String editToDo(@ModelAttribute("todo") ToDo todo) {
+    services.addToDo(todo);
     return "redirect:/";
   }
 }

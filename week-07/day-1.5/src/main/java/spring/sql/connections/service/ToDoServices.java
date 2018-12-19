@@ -6,6 +6,7 @@ import spring.sql.connections.repository.ToDo;
 import spring.sql.connections.repository.ToDoRepository;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ToDoServices {
@@ -37,5 +38,9 @@ public class ToDoServices {
 
   public ArrayList<ToDo> filterIfIsNotDone() {
     return this.repository.findByDoneFalse();
+  }
+
+  public ArrayList<ToDo> search(String search) {
+    return this.repository.findAllByTitleContains(search);
   }
 }
