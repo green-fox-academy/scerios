@@ -16,18 +16,18 @@ public class TodoServices {
     this.repository = repository;
   }
 
-  public List<Todo> getListOfToDos() {
+  public List<Todo> getListOfTodos() {
     List<Todo> todoList = new ArrayList<>();
     repository.findAll().forEach(todoList::add);
     return todoList;
   }
 
-  public Todo getToDoByID(long id) {
+  public Todo getTodoByID(long id) {
     return repository.findById(id).get();
 
   }
 
-  public void addToDo(Todo todo) {
+  public void addTodo(Todo todo) {
     this.repository.save(todo);
   }
 

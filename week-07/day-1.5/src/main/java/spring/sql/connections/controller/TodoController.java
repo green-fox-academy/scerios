@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import spring.sql.connections.model.Todo;
 import spring.sql.connections.service.TodoServices;
-
 import java.util.stream.Collectors;
 
 @Controller
@@ -24,13 +23,13 @@ public class TodoController {
     if (isActive) {
       model.addAttribute("todo", services.filterIfIsNotDone());
     } else {
-      model.addAttribute("todo", services.getListOfToDos());
+      model.addAttribute("todo", services.getListOfTodos());
     }
     return "todo";
   }
 
   @GetMapping("/active")
-  public String activeTodos(@RequestParam(name = "isActive", required = false) boolean isActive, Model model) {
+  public String activeTodos(Model model) {
     model.addAttribute("todo", services.filterIfIsNotDone()
         .stream()
         .filter(todo -> !todo.isDone())
@@ -39,7 +38,7 @@ public class TodoController {
   }
 
   @GetMapping("search")
-  public String search( Model model, @RequestParam ("search") String search) {
+  public String search(Model model, @RequestParam("search") String search) {
     model.addAttribute("todo", services.search(search));
     return "todo";
   }
@@ -51,8 +50,8 @@ public class TodoController {
   }
 
   @PostMapping("add")
-  public String addToDo(@ModelAttribute("todo") Todo todo) {
-    services.addToDo(todo);
+  public String addTodo(@ModelAttribute("todo") Todo todo) {
+    services.addTodo(todo);
     return "redirect:/";
   }
 
@@ -64,13 +63,13 @@ public class TodoController {
 
   @GetMapping("/{id}/edit")
   public String getEditWindow(Model model, @PathVariable long id) {
-    model.addAttribute("todo", services.getToDoByID(id));
+    model.addAttribute("todo", services.getTodoByID(id));
     return "edit";
   }
 
   @PostMapping("/{id}/edit")
   public String editToDo(@ModelAttribute("todo") Todo todo) {
-    services.addToDo(todo);
+    services.addTodo(todo);
     return "redirect:/";
   }
 }
