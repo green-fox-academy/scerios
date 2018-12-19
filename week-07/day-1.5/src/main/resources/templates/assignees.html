@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignees</title>
+</head>
+<body>
+    <form method="get" action="/assignees/">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="assigneee : ${assignee}">
+                    <td th:text="${assigneee.getName()}"></td>
+                    <td th:text="${assigneee.getEmail()}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
