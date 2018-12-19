@@ -1,4 +1,4 @@
-package spring.sql.connections.repository;
+package spring.sql.connections.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
