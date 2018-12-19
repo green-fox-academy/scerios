@@ -1,11 +1,11 @@
-package spring.sql.connections.repository;
+package spring.sql.connections.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class ToDo {
+public class Todo {
 
   @Id
   @GeneratedValue
@@ -14,10 +14,10 @@ public class ToDo {
   private boolean urgent;
   private boolean done;
 
-  public ToDo() {
+  public Todo() {
   }
 
-  public ToDo(String title) {
+  public Todo(String title) {
     this.title = title;
     this.urgent = false;
     this.done = false;

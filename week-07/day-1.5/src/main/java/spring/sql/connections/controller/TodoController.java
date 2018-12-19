@@ -4,19 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import spring.sql.connections.repository.ToDo;
-import spring.sql.connections.service.ToDoServices;
+import spring.sql.connections.model.Todo;
+import spring.sql.connections.service.TodoServices;
 
 import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/")
-public class ToDoController {
-  public static ToDoServices services;
+public class TodoController {
+  private static TodoServices services;
 
   @Autowired
-  public ToDoController(ToDoServices services) {
-    ToDoController.services = services;
+  public TodoController(TodoServices services) {
+    TodoController.services = services;
   }
 
   @GetMapping({"/", "/list"})
@@ -45,13 +45,13 @@ public class ToDoController {
   }
 
   @GetMapping("add")
-  public String getAddWindow(Model model, @ModelAttribute(value = "todo") ToDo todo) {
+  public String getAddWindow(Model model, @ModelAttribute(value = "todo") Todo todo) {
     model.addAttribute("todo", todo);
     return "/add";
   }
 
   @PostMapping("add")
-  public String addToDo(@ModelAttribute("todo") ToDo todo) {
+  public String addToDo(@ModelAttribute("todo") Todo todo) {
     services.addToDo(todo);
     return "redirect:/";
   }
@@ -69,7 +69,7 @@ public class ToDoController {
   }
 
   @PostMapping("/{id}/edit")
-  public String editToDo(@ModelAttribute("todo") ToDo todo) {
+  public String editToDo(@ModelAttribute("todo") Todo todo) {
     services.addToDo(todo);
     return "redirect:/";
   }
