@@ -44,13 +44,14 @@ public class TodoController {
   }
 
   @GetMapping("add")
-  public String getAddWindow(Model model, @ModelAttribute(value = "todo") Todo todo) {
-    model.addAttribute("todo", todo);
+  public String getAddWindow(Model model) {
+    model.addAttribute("todo", new Todo());
     return "/add";
   }
 
   @PostMapping("add")
-  public String addTodo(@ModelAttribute("todo") Todo todo) {
+  public String addTodo(@ModelAttribute Todo todo) {
+    System.out.println(todo.getId() + " add");
     services.addTodo(todo);
     return "redirect:/";
   }
@@ -63,12 +64,14 @@ public class TodoController {
 
   @GetMapping("/{id}/edit")
   public String getEditWindow(Model model, @PathVariable long id) {
+    System.out.println(id + " getmapping ID");
     model.addAttribute("todo", services.getTodoByID(id));
     return "edit";
   }
 
   @PostMapping("/{id}/edit")
-  public String editToDo(@ModelAttribute("todo") Todo todo) {
+  public String editToDo(@ModelAttribute Todo todo) {
+    System.out.println(todo.getId() + " send ID");
     services.addTodo(todo);
     return "redirect:/";
   }

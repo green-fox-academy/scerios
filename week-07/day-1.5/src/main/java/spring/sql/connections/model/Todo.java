@@ -9,7 +9,7 @@ public class Todo {
 
   @Id
   @GeneratedValue
-  private long ID;
+  private long id;
   private String title;
   private boolean urgent;
   private boolean done;
@@ -23,12 +23,12 @@ public class Todo {
     this.done = false;
   }
 
-  public long getID() {
-    return ID;
+  public long getId() {
+    return id;
   }
 
-  public void setID(long ID) {
-    this.ID = ID;
+  public void setId(long id) {
+    this.id = id;
   }
 
   public String getTitle() {

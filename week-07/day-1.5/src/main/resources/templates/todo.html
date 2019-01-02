@@ -26,12 +26,12 @@
         </thead>
         <tbody>
             <tr th:each="todoo : ${todo}">
-                <td th:text="${todoo.getID()}"></td>
+                <td th:text="${todoo.getId()}"></td>
                 <td th:text="${todoo.getTitle()}"></td>
                 <td th:text="${todoo.isDone()}"></td>
                 <td th:text="${todoo.isUrgent()}"></td>
-                <td><a th:href="@{/{id}/delete(id=${todoo.getID()})}">Delete</a></td>
-                <td><a th:href="@{/{id}/edit(id=${todoo.getID()})}">Edit</a></td>
+                <td><a th:href="@{/{id}/delete(id=${todoo.getId()})}">Delete</a></td>
+                <td><a th:href="@{/{id}/edit(id=${todoo.getId()})}">Edit</a></td>
             </tr>
         </tbody>
     </table>
