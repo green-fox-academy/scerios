@@ -11,26 +11,26 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/")
 public class TodoController {
-  private static TodoServices services;
+  private TodoServices todoServices;
 
   @Autowired
-  public TodoController(TodoServices services) {
-    TodoController.services = services;
+  public TodoController(TodoServices todoServices) {
+    this.todoServices = todoServices;
   }
 
   @GetMapping({"/", "/list"})
   public String getList(Model model, @RequestParam(required = false) boolean isActive) {
     if (isActive) {
-      model.addAttribute("todo", services.filterIfIsNotDone());
+      model.addAttribute("todo", todoServices.filterIfIsNotDone());
     } else {
-      model.addAttribute("todo", services.getListOfTodos());
+      model.addAttribute("todo", todoServices.getListOfTodos());
     }
     return "todo";
   }
 
   @GetMapping("/active")
   public String activeTodos(Model model) {
-    model.addAttribute("todo", services.filterIfIsNotDone()
+    model.addAttribute("todo", todoServices.filterIfIsNotDone()
         .stream()
         .filter(todo -> !todo.isDone())
         .collect(Collectors.toList()));
@@ -39,7 +39,7 @@ public class TodoController {
 
   @GetMapping("search")
   public String search(Model model, @RequestParam("search") String search) {
-    model.addAttribute("todo", services.search(search));
+    model.addAttribute("todo", todoServices.search(search));
     return "todo";
   }
 
@@ -51,28 +51,25 @@ public class TodoController {
 
   @PostMapping("add")
   public String addTodo(@ModelAttribute Todo todo) {
-    System.out.println(todo.getId() + " add");
-    services.addTodo(todo);
+    todoServices.addTodo(todo);
     return "redirect:/";
   }
 
   @GetMapping("/{id}/delete")
   public String deleteTodo(@PathVariable long id) {
-    services.deleteTodo(id);
+    todoServices.deleteTodo(id);
     return "redirect:/";
   }
 
   @GetMapping("/{id}/edit")
   public String getEditWindow(Model model, @PathVariable long id) {
-    System.out.println(id + " getmapping ID");
-    model.addAttribute("todo", services.getTodoByID(id));
+    model.addAttribute("todo", todoServices.getTodoByID(id));
     return "edit";
   }
 
   @PostMapping("/{id}/edit")
   public String editToDo(@ModelAttribute Todo todo) {
-    System.out.println(todo.getId() + " send ID");
-    services.addTodo(todo);
+    todoServices.addTodo(todo);
     return "redirect:/";
   }
 }
