@@ -1,12 +1,7 @@
 package com.example.rest.controller;
 
-import com.example.rest.model.AppendA;
-import com.example.rest.model.ErrorMessage;
-import com.example.rest.model.MyMath;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.rest.model.*;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ApiController {
@@ -38,4 +33,11 @@ public class ApiController {
   public String error() {
     return "404";
   }
+
+  @PostMapping("dountil/{action}")
+  public Result doUntil(@PathVariable String action, @RequestBody DoUntil doUntil) {
+    Result result = doUntil.getResult(action);
+    return result;
+  }
+
 }

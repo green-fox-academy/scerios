@@ -6,7 +6,7 @@ public class AppendA {
   public AppendA() {}
 
   public AppendA(String word) {
-    this.appended = word + "a";
+    this.appended = word.concat("a");
   }
 
   public String getAppended() {
@@ -14,6 +14,6 @@ public class AppendA {
   }
 
   public void setAppended(String appended) {
-    this.appended = appended;
+    this.appended = appended.concat("a");
   }
 }
