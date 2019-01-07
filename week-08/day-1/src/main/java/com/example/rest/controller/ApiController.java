@@ -10,10 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
 
   @GetMapping("/doubling")
-  public Object doubling(@RequestParam(defaultValue = "0") Integer input) {
-    if (input == null || input.toString().equals("")) {
-      return new ErrorMessage();
+  public Object doubling(@RequestParam Integer input) {
+    if (input == null) {
+      return new ErrorMessage().getMathMessage();
     }
     return new MyMath(input);
+  }
+
+  @GetMapping("greeter")
+  public String greetingMessage(@RequestParam String name, String title) {
+    if (name.equals("")) {
+      return ErrorMessage.getNameMessage();
+    } else if (title.equals("")) {
+      return ErrorMessage.getTitleMessage();
+    }
+    return "Oh, hi there " + name + ", my dear " + title + "!";
   }
 }
